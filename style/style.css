@@ -320,6 +320,7 @@
   overflow-y: hidden;
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 0px 5px;
   background-image: linear-gradient(160deg, #00fcef 0%, #5cad43 100%);
   border-radius: 5px;
@@ -425,7 +426,7 @@
   width: 100%;
   border: 1px solid rgb(153, 145, 145);
   height: 50px;
-  overflow: hidden;
+  overflow-y: hidden;
   margin-top: 10px;
 }
 .detail .vt_group ul {
@@ -497,7 +498,7 @@
   justify-content: center;
 }
 .buy_code .buy_code_detail div {
-  width: 14%;
+  width: 180px;
   margin-right: 3rem;
   margin-bottom: 3rem;
   display: flex;
@@ -614,18 +615,23 @@
   padding-top: 10px;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
+  justify-content: center;
 }
 .news_event .news_event_details div {
   display: flex;
   flex-direction: column;
-  width: 23%;
+  width: 300px;
   transition: 0.25s;
   cursor: pointer;
+  margin-right: 20px;
+  margin-bottom: 20px;
 }
 .news_event .news_event_details div img {
   border-radius: 5px;
   border: 1px solid rgb(120, 118, 118);
+  margin-bottom: 5px;
 }
 .news_event .news_event_details div p {
   color: white;
@@ -676,14 +682,16 @@
   border-top: 1px solid #656565;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
 }
 
 .about_logo {
   display: flex;
   flex-direction: column;
-  width: 23%;
-  margin-right: 1%;
+  width: 300px;
+  height: 220px;
+  margin-right: 20px;
 }
 .about_logo div {
   display: flex;
@@ -718,6 +726,9 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  width: 300px;
+  height: 220px;
+  margin-top: 0px;
 }
 .about_1 h5 {
   font-size: 1.8rem;
@@ -808,13 +819,14 @@
   border-radius: 5px;
   transition: 0.25s;
   background-color: #ccc;
+  overflow: hidden;
 }
 .btn5 button:hover {
   transform: translateY(-2px);
   background-color: rgb(144, 225, 222);
 }
 
-@media only screen and (min-width: 400px) and (max-width: 1100px) {
+@media only screen and (min-width: 765px) and (max-width: 1250px) {
   .header {
     height: 70px;
   }
@@ -832,6 +844,96 @@
   }
   .slide {
     margin-top: 70px;
+  }
+  .about {
+    display: flex;
+    justify-content: center !important;
+    flex-wrap: wrap;
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .info button {
+    margin: 5px;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 350px) and (max-width: 765px) {
+  .sub_h,
+.footer {
+    width: 100%;
+  }
+  .header {
+    height: 70px;
+  }
+  .header .header_h {
+    display: none;
+  }
+  .header .header_f {
+    transform: translateY(0px);
+  }
+  .header .header_f .f_item {
+    display: none;
+  }
+  .content .sub_content {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .content .sub_content .choose {
+    display: flex;
+    flex-direction: column;
+  }
+  .content .sub_content .choose h4 {
+    margin-bottom: 5px;
+  }
+  .content .sub_content .choose button {
+    margin-bottom: 5px;
+  }
+  .content .content_foot {
+    width: 100%;
+    padding: 0 15px;
+    display: none;
+  }
+  #menu {
+    display: block !important;
+    margin-right: 5% !important;
+  }
+  .slide {
+    margin-top: 70px;
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .info button {
+    margin: 5px;
+    width: 100%;
+  }
+  .footer_f {
+    width: 100% !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer_f div {
+    margin-right: 10px;
+    width: 200px;
+  }
+  .footer_f .btn5 {
+    width: 100%;
+  }
+  .footer_f .btn5 button {
+    font-size: 1.2rem;
+    height: 2.5rem;
+    padding: 0px !important;
+  }
+  .footer_f .btn5 button:hover {
+    transform: translateY(-2px);
+    background-color: rgb(144, 225, 222);
   }
 }
 #menu {

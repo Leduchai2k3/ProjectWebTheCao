@@ -32,15 +32,18 @@
     border-top: 1px solid #656565;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
   }
 }
 
 .about_logo {
+  // border: 1px solid #fff;
   display: flex;
   flex-direction: column;
-  width: 23%;
-  margin-right: 1%;
+  width: 300px;
+  height: 220px;
+  margin-right: 20px;
   div {
     display: flex;
     width: 300px;
@@ -75,7 +78,12 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  width: 300px;
+  height: 220px;
+  // border: 1px solid #fff;
+  margin-top: 0px;
   h5 {
+    // margin-top: 0px;
     font-size: 1.8rem;
     color: white;
     padding-bottom: 15px;
@@ -166,6 +174,7 @@
     border-radius: 5px;
     transition: 0.25s;
     background-color: #ccc;
+    overflow: hidden;
   }
   button:hover {
     transform: translateY(-2px);
