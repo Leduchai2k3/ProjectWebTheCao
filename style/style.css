@@ -43,16 +43,17 @@
 .header_h div a i {
   margin-right: 5px;
 }
-.header_h .log a {
+
+.log a {
   padding: 8px 15px;
-  border: 1px solid #0fecec;
+  border: 1px solid #0fecec !important;
   border-radius: 5px;
 }
-.header_h .log a:hover {
+.log a:hover {
   background: #0fecec;
   color: #fff;
   border-radius: 5px;
-  box-shadow: 0 0 5px #0fecec, 0 0 25px #0fecec, 0 0 50px #0fecec, 0 0 100px #0fecec;
+  box-shadow: 0 0 5px #0fecec, 0 0 25px #0fecec, 0 0 50px #0fecec, 0 0 20px #0fecec;
 }
 
 .header_f {
@@ -62,6 +63,8 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  overflow: hidden;
+  padding-right: 20px;
 }
 .header_f a {
   display: flex;
@@ -78,6 +81,7 @@
 .header_f a h2 {
   font-size: 2rem;
   margin-right: 5rem;
+  letter-spacing: 0.2rem;
   min-width: 105px;
   text-transform: uppercase;
   background: linear-gradient(to bottom right, #00a6ff, #d9f82c);
@@ -814,9 +818,6 @@
   .header {
     height: 70px;
   }
-  .header #menu {
-    display: block;
-  }
   .header .header_h {
     display: none;
   }
@@ -826,10 +827,125 @@
   .header .header_f .f_item {
     display: none;
   }
+  #menu {
+    display: block !important;
+  }
   .slide {
     margin-top: 70px;
   }
 }
+#menu {
+  position: absolute;
+  top: 35px;
+  right: 0;
+  transform: translateY(-50%);
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: 0.25s;
+  color: #0fecec;
+  margin-right: 2rem;
+  z-index: 4;
+  display: none;
+  margin-right: 15%;
+}
+
+.nav {
+  background-color: rgb(0, 0, 0);
+  position: absolute;
+  width: 30%;
+  top: 0px;
+  bottom: 0;
+  right: 0px;
+  z-index: 5;
+  border: 1px solid rgb(57, 57, 57);
+  overflow: hidden;
+  opacity: 0;
+  transform: translateX(120%);
+}
+
+.ft_item {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  margin-top: 60px;
+  overflow: hidden;
+  height: 100%;
+}
+.ft_item .log {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0 20px 0;
+}
+.ft_item .log .login {
+  margin-bottom: 20px;
+}
+.ft_item .log .login,
+.ft_item .log .signin {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  padding-left: 1rem !important;
+  transition: 0.25s;
+}
+.ft_item .log .login i,
+.ft_item .log .signin i {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+.ft_item .log .login p,
+.ft_item .log .signin p {
+  font-size: 1.6rem;
+}
+.ft_item .log .login:hover p,
+.ft_item .log .signin:hover p {
+  color: rgb(0, 0, 0);
+}
+.ft_item a {
+  color: white;
+  padding: 15px;
+  border-bottom: 1px solid rgb(63, 63, 63);
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+.ft_item a:hover {
+  color: #0fecec;
+}
+.ft_item .fa-xmark {
+  position: absolute;
+  color: #fff;
+  right: 1.5rem;
+  top: 1.5rem;
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: 0.25s;
+}
+.ft_item .fa-xmark:hover {
+  color: #0fecec;
+  scale: 1.2;
+}
+
+#menu:hover {
+  color: rgb(186, 216, 35);
+}
+
+.nav_show {
+  transform: translateX(0%);
+  opacity: 1;
+  transition: all 0.5s ease;
+}
+
+.nav_hide {
+  transform: translateX(120%);
+  opacity: 1;
+  transition: all 0.5s ease;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -913,23 +1029,6 @@ a {
 }
 .container .sub_container button:hover {
   background-color: black;
-}
-
-#menu {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  font-size: 2.5rem;
-  cursor: pointer;
-  transition: 0.25s;
-  color: #0fecec;
-  margin-right: 2rem;
-  display: none;
-}
-
-#menu:hover {
-  color: rgb(186, 216, 35);
 }
 
 .hide {

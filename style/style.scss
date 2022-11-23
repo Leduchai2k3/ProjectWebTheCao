@@ -13,6 +13,7 @@ $clbtn: linear-gradient(160deg, #00fcef 0%, #5cad43 100%);
 @import "new_event";
 @import "footer";
 @import "responsive_ipad";
+@import "menu";
 * {
   margin: 0;
   padding: 0;
@@ -95,22 +96,6 @@ a {
       background-color: black;
     }
   }
-}
-
-#menu {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  font-size: 2.5rem;
-  cursor: pointer;
-  transition: 0.25s;
-  color: $colorh;
-  margin-right: 2rem;
-  display: none;
-}
-#menu:hover {
-  color: rgb(186, 216, 35);
 }
 
 .hide {
