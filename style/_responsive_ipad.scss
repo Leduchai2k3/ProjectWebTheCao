@@ -1,0 +1,21 @@
+@media only screen and (min-width: 400px) and (max-width: 1100px) {
+  .header {
+    height: 70px;
+    #menu {
+      display: block;
+    }
+    .header_h {
+      display: none;
+    }
+    .header_f {
+      transform: translateY(0px);
+      .f_item {
+        display: none;
+      }
+    }
+  }
+
+  .slide {
+    margin-top: 70px;
+  }
+}

@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700&display=swap");
+$bgColor: rgb(0, 0, 0);
+$bgColorh: rgb(0, 0, 0);
+$colorh: #0fecec;
+$colorcontent: rgb(25, 191, 188);
+$clbtn: linear-gradient(160deg, #00fcef 0%, #5cad43 100%);
+@import "header";
+@import "slide";
+@import "content";
+@import "content_foot";
+@import "buy_code";
+@import "code_mobile_detail";
+@import "new_event";
+@import "footer";
+@import "responsive_ipad";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+}
+a {
+  text-decoration: none;
+  font-size: 1.8rem;
+  white-space: nowrap;
+}
+
+.container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .sub_container {
+    width: 550px;
+    // height: 22%;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    h4 {
+      font-size: 1.6rem;
+      color: black;
+      padding-bottom: 20px;
+      width: 100%;
+      border-bottom: 1px solid #ccc;
+    }
+    span {
+      font-size: 1.6rem;
+      color: black;
+      margin-top: 20px;
+      p {
+        font-size: 1.6rem;
+        display: contents;
+        color: red;
+      }
+      padding-bottom: 20px;
+      border-bottom: 1px solid #ccc;
+    }
+    button {
+      margin-top: 20px;
+      width: 100%;
+      border: 1px solid $colorh;
+      cursor: pointer;
+      border-radius: 5px;
+      padding: 8px 20px;
+      overflow: hidden;
+      transition: 0.5s;
+      p {
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        background: linear-gradient(to bottom right, #b61717, #00ddff);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 700;
+        font-size: 2rem;
+      }
+    }
+    button:hover {
+      background-color: black;
+    }
+  }
+}
+
+#menu {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: 0.25s;
+  color: $colorh;
+  margin-right: 2rem;
+  display: none;
+}
+#menu:hover {
+  color: rgb(186, 216, 35);
+}
+
+.hide {
+  display: none;
+}

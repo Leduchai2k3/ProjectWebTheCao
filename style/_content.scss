@@ -1,0 +1,197 @@
+@mixin btn1 {
+  font-size: 1.2rem;
+  width: 12rem;
+  background-color: transparent;
+  border: 1px solid $colorh;
+  color: white;
+  outline: none;
+  position: relative;
+  padding: 7px;
+  border-radius: 5px;
+  margin-right: 5px;
+  cursor: pointer;
+  transition: 0.25s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin btn2 {
+  font-size: 1.2rem;
+  width: 24%;
+  height: 30px;
+  border: 1px solid $colorh;
+  outline: none;
+  // padding: 3px 10px 3px 5px;
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $bgColor;
+  flex-direction: column;
+}
+.sub_content {
+  margin: 40px 0px 10px 0px;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  h3 {
+    font-size: 3rem;
+    margin: 10px auto;
+    text-transform: uppercase;
+    cursor: pointer;
+    background: linear-gradient(to bottom right, #00f2ff, #01ff34);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+  }
+  a {
+    font-size: 1.5rem;
+    color: #01ff34;
+    font-weight: 700;
+    transition: 0.25s;
+  }
+  a:hover {
+    color: #ff0101;
+  }
+  p {
+    font-size: 1.5rem;
+    color: $colorh;
+    line-height: 30px;
+    font-weight: 500;
+  }
+  ul {
+    list-style: inside;
+    padding: 0 40px;
+    margin-bottom: 30px;
+    li {
+      font-size: 1.3rem;
+      line-height: 20px;
+      color: $colorh;
+      line-height: 2.5rem;
+    }
+  }
+}
+
+.choose {
+  //   background-color: #fff;
+  display: flex;
+  align-items: center;
+  color: $colorh;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgb(50, 50, 50);
+  h4 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-right: 5px;
+  }
+  button {
+    @include btn1();
+  }
+  button:hover {
+    background: rgba(1, 242, 255, 0.6);
+    color: #fff;
+    border-radius: 0.5rem;
+  }
+}
+
+.info {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn1 {
+  @include btn1();
+  width: 20%;
+  margin-right: 1rem;
+  white-space: nowrap;
+}
+.btnif {
+  @include btn1();
+  width: 15%;
+  margin-right: 1rem;
+  white-space: nowrap;
+}
+.btn2 {
+  @include btn2();
+  width: 26%;
+  overflow-y: hidden;
+  margin-right: 1rem;
+  white-space: nowrap;
+  input {
+    @include btn2();
+    padding-left: 10px;
+    width: 100%;
+    border: none;
+    outline: none;
+    color: white;
+    height: 30px;
+  }
+}
+.add {
+  height: 30px;
+  overflow-y: hidden;
+  display: flex;
+  align-items: center;
+  padding: 0px 5px;
+  background-image: $clbtn;
+  border-radius: 5px;
+  transition: 0.25s;
+  cursor: pointer;
+  i {
+    font-size: 1.2rem;
+    margin-right: 0.3rem;
+  }
+  p {
+    color: black;
+    padding: 8px 5px;
+  }
+}
+
+.btn3 {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  font-size: 1.6rem;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-image: linear-gradient(160deg, #00fcef 0%, #5cad43 100%);
+  border-radius: 5px;
+  i {
+    font-size: 2rem;
+    margin-right: 1rem;
+  }
+}
+.btn3:hover,
+.add:hover {
+  background-image: linear-gradient(160deg, #80ff00 0%, #517076 100%);
+}
+
+.footer_f {
+  width: 100%;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgb(84, 83, 83);
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    i {
+      color: white;
+      margin: 0px 10px;
+      font-size: 1.6rem;
+    }
+  }
+}

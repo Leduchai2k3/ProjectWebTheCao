@@ -1,0 +1,64 @@
+.buy_code {
+  margin: 30px 0px 10px 0px;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  h3 {
+    font-size: 3rem;
+    margin: 10px auto 0px auto;
+    text-transform: uppercase;
+    cursor: pointer;
+    background: linear-gradient(to bottom right, #00f2ff, #01ff34);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+  }
+  p {
+    color: $colorcontent;
+    // color: $colorh;
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+    margin-top: 20px;
+  }
+  .buy_code_detail {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    justify-content: center;
+
+    div {
+      width: 14%;
+      margin-right: 3rem;
+      margin-bottom: 3rem;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      transition: 0.25s;
+      padding-top: 8px;
+      cursor: pointer;
+      img {
+        width: 100%;
+        height: 100px;
+        border: 1px solid rgb(65, 63, 63);
+        padding: 15px 10px;
+        transition: 0.25s;
+      }
+      p {
+        margin-top: 10px;
+        color: white;
+        transition: 0.25s;
+      }
+    }
+    div:hover {
+      transform: translateY(-5px);
+      img {
+        border: 1px solid $colorh;
+      }
+
+      p {
+        color: $colorh;
+      }
+    }
+  }
+}
