@@ -30,6 +30,7 @@
 .header_h div {
   display: flex;
   align-items: center;
+  transition: 0.25s;
 }
 .header_h div a {
   display: flex;
@@ -44,6 +45,13 @@
   margin-right: 5px;
 }
 
+.log a:hover {
+  color: #5ba8c4;
+}
+
+.log {
+  padding: 0px 25px;
+}
 .log a {
   padding: 8px 15px;
   border: 1px solid #0fecec !important;
@@ -112,6 +120,7 @@
 }
 .sub_sidebar p {
   font-size: 1.6rem;
+  font-size: 1.4rem;
   color: #0fecec;
   margin-right: 5px;
 }
@@ -119,6 +128,7 @@
   text-decoration: none;
   text-transform: uppercase;
   font-size: 1.6rem;
+  font-size: 1.4rem;
   letter-spacing: 1px;
   color: #0fecec;
   margin-right: 5px;
@@ -256,11 +266,39 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+}
+.choose button div {
+  transform: translateY(0%);
+  transition: all 0.15s linear;
+  margin-top: 2px;
+  cursor: pointer;
+  position: absolute;
+  opacity: 1;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: rgba(255, 255, 255, 0.3) 0px 10px 20px 0px;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  z-index: 1;
+}
+.choose button div p {
+  width: 100%;
+  color: rgb(154, 147, 147);
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgb(47, 47, 47);
+}
+.choose button div p:hover {
+  color: #0fecec;
 }
 .choose button:hover {
-  background: rgba(1, 242, 255, 0.6);
   color: #fff;
-  border-radius: 0.5rem;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #03e9f4, 0 0 0px #03e9f4, 0 0 20px #03e9f4, 0 0 20px #03e9f4;
 }
 
 .info {
@@ -268,6 +306,36 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.info button {
+  position: relative;
+}
+.info button div {
+  transform: translateY(0%);
+  transition: all 0.15s linear;
+  margin-top: 2px;
+  cursor: pointer;
+  position: absolute;
+  opacity: 1;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: rgba(255, 255, 255, 0.3) 0px 10px 20px 0px;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  z-index: 1;
+}
+.info button div p {
+  width: 100%;
+  color: rgb(154, 147, 147);
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgb(47, 47, 47);
+}
+.info button div p:hover {
+  color: #0fecec;
 }
 
 .btn1 {
@@ -310,6 +378,7 @@
   width: 15%;
   margin-right: 1rem;
   white-space: nowrap;
+  position: relative;
 }
 
 .btn2 {
@@ -401,6 +470,18 @@
   color: white;
   margin: 0px 10px;
   font-size: 1.6rem;
+}
+
+.hide_code {
+  opacity: 0 !important;
+  transform: translateY(-20%) !important;
+  pointer-events: none;
+}
+
+.avtive_btn {
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #03e9f4, 0 0 0px #03e9f4, 0 0 20px #03e9f4, 0 0 20px #03e9f4;
 }
 
 .content_foot {
@@ -616,6 +697,62 @@
   border: 2px solid #0fecec;
 }
 .code_mobile_detail div:hover p {
+  color: #0fecec;
+}
+
+.news_event {
+  margin: 30px 0px;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+.news_event h3 {
+  font-size: 3rem;
+  margin: 10px auto 0px auto;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: linear-gradient(to bottom right, #00f2ff, #01ff34);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+.news_event .news_event_details {
+  margin-top: 30px;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  justify-content: center;
+}
+.news_event .news_event_details div {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  transition: 0.25s;
+  cursor: pointer;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+.news_event .news_event_details div img {
+  border-radius: 5px;
+  border: 1px solid rgb(120, 118, 118);
+  margin-bottom: 5px;
+}
+.news_event .news_event_details div p {
+  color: white;
+  font-size: 1.4rem;
+  margin-top: 1rem;
+  line-height: 2.2rem;
+}
+.news_event .news_event_details div:hover {
+  transform: translateY(-5px);
+}
+.news_event .news_event_details div:hover img {
+  border: 2px solid #0fecec;
+}
+.news_event .news_event_details div:hover p {
   color: #0fecec;
 }
 
@@ -1116,7 +1253,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 40px;
+  padding: 100px;
   overflow: hidden;
 }
 
@@ -1124,9 +1261,9 @@
   width: 400px;
   height: 400px;
   padding: 40px;
-  background: rgb(189, 45, 45);
+  background: rgb(0, 0, 0);
   box-sizing: border-box;
-  box-shadow: 0 15px 25px rgba(51, 51, 51, 0.6);
+  box-shadow: -5px 5px 83px 0px rgba(255, 255, 255, 0.5);
   border-radius: 10px;
   overflow: hidden;
   position: relative;
@@ -1152,6 +1289,11 @@
 }
 
 .login-box h2 {
+  background: linear-gradient(to bottom right, #00a6ff, #d9f82c);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
   margin: 0 0 30px;
   font-size: 3rem;
   padding: 0;
@@ -1169,7 +1311,7 @@
   width: 100%;
   padding: 20px 0px 10px 0px;
   font-size: 16px;
-  color: black;
+  color: white;
   margin-bottom: 30px;
   border: none;
   border-bottom: 1px solid #fff;
@@ -1183,7 +1325,7 @@
   left: 0;
   padding: 20px 0;
   font-size: 16px;
-  color: black;
+  color: white;
   pointer-events: none;
   transition: 0.5s;
 }
@@ -1342,6 +1484,10 @@
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
   overflow-x: hidden;
 }
 

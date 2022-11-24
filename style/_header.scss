@@ -27,6 +27,9 @@
   div {
     display: flex;
     align-items: center;
+
+    transition: 0.25s;
+
     a {
       display: flex;
       margin-right: 15px;
@@ -44,6 +47,14 @@
   }
 }
 .log {
+  a:hover {
+    color: #5ba8c4;
+  }
+}
+
+.log {
+  padding: 0px 25px;
+
   a {
     padding: 8px 15px;
     border: 1px solid $colorh !important;
@@ -111,13 +122,20 @@
   align-items: center;
   p {
     font-size: 1.6rem;
+
+    font-size: 1.4rem;
+
     color: $colorh;
     margin-right: 5px;
   }
   a {
     text-decoration: none;
     text-transform: uppercase;
+
     font-size: 1.6rem;
+
+    font-size: 1.4rem;
+
     letter-spacing: 1px;
     color: $colorh;
     margin-right: 5px;

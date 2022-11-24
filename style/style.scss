@@ -21,9 +21,11 @@ $clbtn: linear-gradient(160deg, #00fcef 0%, #5cad43 100%);
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+body {
   overflow-x: hidden;
 }
-
 .main {
   width: 100vw;
   height: 100vh;
