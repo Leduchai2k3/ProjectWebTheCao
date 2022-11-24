@@ -410,8 +410,10 @@
   height: 30px;
 }
 
-.add {
+.add,
+.remove {
   height: 30px;
+  width: 80px;
   overflow-y: hidden;
   display: flex;
   align-items: center;
@@ -422,11 +424,13 @@
   transition: 0.25s;
   cursor: pointer;
 }
-.add i {
+.add i,
+.remove i {
   font-size: 1.2rem;
   margin-right: 0.3rem;
 }
-.add p {
+.add p,
+.remove p {
   color: black;
   padding: 8px 5px;
 }
@@ -449,6 +453,10 @@
 .btn3:hover,
 .add:hover {
   background-image: linear-gradient(160deg, #80ff00 0%, #517076 100%);
+}
+
+.remove:hover {
+  background-image: linear-gradient(160deg, #ff0000 0%, #517076 100%);
 }
 
 .footer_f {

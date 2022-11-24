@@ -1,10 +1,66 @@
-const menu = document.querySelector("#menu");
-const nav = document.querySelector(".nav");
-const close = document.querySelector(".close");
-const header = document.querySelector(".header");
-const slide = document.querySelector(".slide");
-const content = document.querySelector(".content");
-const footer = document.querySelector(".footer");
+// const info = document.createElement("div");
+// subContent.appendChild(info);
+// info.classList.add("info");
+// info.innerHTML = addCard;
+const addCard = `<div class="info">
+                        <button class="btnif"><span class="btnif_content"
+                                style="font-size: 1.2rem;">Viettel</span>
+                            <i class="fa-solid fa-angle-down"></i>
+                            <div class="if_choose_code hide_code">
+                                <p>Viettel</p>
+                                <p>Vinaphone</p>
+                                <p>Mobifone</p>
+                                <p>Vietnammobile</p>
+                                <p>Zing</p>
+                                <p>Garena</p>
+                                <p>Gata</p>
+                                <p>Vcoin</p>
+                            </div>
+                        </button>
+                        <button class="btn2"><input type="text" placeholder="Mã thẻ"></button>
+                        <button class="btn2"><input type="text" placeholder="Serial thẻ"></button>
+                        <button class="btn1"><span class="btn1_code_content"
+                                style="font-size: 1.2rem;">Chọn mệnh giá</span>
+                            <i class="fa-solid fa-angle-down"></i>
+                            <div class="if_price_code hide_code">
+                                <p>20.000đ</p>
+                                <p>30.000đ</p>
+                                <p>50.000đ</p>
+                                <p>100.000đ</p>
+                                <p>200.000đ</p>
+                                <p>300.000đ</p>
+                                <p>500.000đ</p>
+                                <p>1000.000đ</p>
+                            </div>
+                        </button>
+                        <button class="remove"><i class="fa-solid fa-trash"></i>
+                            <p>Xóa</p></button>
+                    </div>`;
+
+const $ = document.querySelector.bind(document);
+const $$ = document.querySelectorAll.bind(document);
+
+const menu = $("#menu");
+const nav = $(".nav");
+const close = $(".close");
+const header = $(".header");
+const slide = $(".slide");
+const content = $(".content");
+const footer = $(".footer");
+const subContent = $(".sub_content");
+const add = $(".add");
+add.addEventListener("click", () => {
+  subContent.insertAdjacentHTML("beforeend", addCard);
+
+  const remove = document.querySelector(".remove");
+  remove.addEventListener("click", () => {
+    remove.parentNode.remove();
+  });
+});
+// const remove = document.querySelector(".remove");
+// remove.addEventListener("click", () => {
+//   console.log(remove.parentNode.remove());
+// });
 
 function navHide() {
   nav.classList.remove("nav_show");
@@ -24,23 +80,26 @@ slide.addEventListener("click", navHide);
 content.addEventListener("click", navHide);
 footer.addEventListener("click", navHide);
 
-const chooseTagDetail = document.querySelector(".choose_tag_detail");
-const chooseCode = document.querySelector(".choose_code");
-const priceCodeDetail = document.querySelector(".price_code_detail");
-const priceCode = document.querySelector(".price_code");
-const itemPriceCode = priceCode.querySelectorAll("p");
-const btnif = document.querySelector(".btnif");
-const btnifContent = document.querySelector(".btnif_content");
-const ifChooseCode = document.querySelector(".if_choose_code");
-const itemifChooseCode = ifChooseCode.querySelectorAll("p");
-const btn1 = document.querySelector(".btn1");
-const ifPriceCode = document.querySelector(".if_price_code");
-const itemifPriceCode = ifPriceCode.querySelectorAll("p");
-const itemChooseCode = chooseCode.querySelectorAll("p");
-const chooseContent = document.querySelector(".choose_content");
-const priceCodeContent = document.querySelector(".price_code_content");
-const btn1CodeContent = document.querySelector(".btn1_code_content");
+const chooseTagDetail = $(".choose_tag_detail");
+const priceCodeDetail = $(".price_code_detail");
+const btn1CodeContent = $(".btn1_code_content");
 
+const btnif = $(".btnif");
+const btn1 = $(".btn1");
+const ifPriceCode = $(".if_price_code");
+const itemifPriceCode = ifPriceCode.querySelectorAll("p");
+
+const btnifContent = $(".btnif_content");
+const ifChooseCode = $(".if_choose_code");
+const itemifChooseCode = ifChooseCode.querySelectorAll("p");
+
+const priceCodeContent = $(".price_code_content");
+const priceCode = $(".price_code");
+const itemPriceCode = priceCode.querySelectorAll("p");
+
+const chooseContent = $(".choose_content");
+const chooseCode = $(".choose_code");
+const itemChooseCode = chooseCode.querySelectorAll("p");
 [...itemChooseCode].forEach((item) => {
   item.addEventListener("click", () => {
     chooseContent.textContent = item.textContent;
