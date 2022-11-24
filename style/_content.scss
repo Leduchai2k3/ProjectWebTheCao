@@ -85,6 +85,7 @@
   color: $colorh;
   padding-bottom: 1.5rem;
   border-bottom: 1px solid rgb(50, 50, 50);
+  position: relative;
   h4 {
     font-size: 1.5rem;
     font-weight: 500;
@@ -98,6 +99,23 @@
     color: #fff;
     border-radius: 0.5rem;
   }
+  // .choose_code {
+  //   position: absolute;
+  //   left: 0;
+  //   top: 50%;
+  //   width: 120px;
+  //   height: 500px;
+  //   background-color: #00f2ff;
+  //   display: flex;
+  //   align-items: flex-start;
+  //   flex-direction: column;
+  //   z-index: 10000;
+  //   p {
+  //     z-index: 5;
+
+  //     color: red;
+  //   }
+  // }
 }
 
 .info {

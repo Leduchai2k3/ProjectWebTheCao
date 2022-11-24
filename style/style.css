@@ -148,6 +148,28 @@
   box-shadow: -46px -33px 65px -33px rgba(0, 0, 0, 0.3), -4px -4px 10px 0 rgba(116, 125, 136, 0.5), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.4);
 }
 
+.sidebar {
+  margin-top: 110px;
+  width: 100%;
+  height: 30px;
+  background-color: #032d33;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sidebar .sub_sidebar {
+  width: 70%;
+  display: flex;
+}
+.sidebar .sub_sidebar p {
+  font-size: 1.6rem;
+  color: #0fecec;
+}
+.sidebar .sub_sidebar a {
+  text-decoration: none;
+  color: #0fecec;
+}
+
 .content {
   width: 100%;
   display: flex;
@@ -208,6 +230,7 @@
   color: #0fecec;
   padding-bottom: 1.5rem;
   border-bottom: 1px solid rgb(50, 50, 50);
+  position: relative;
 }
 .choose h4 {
   font-size: 1.5rem;
@@ -934,6 +957,31 @@
   .footer_f .btn5 button:hover {
     transform: translateY(-2px);
     background-color: rgb(144, 225, 222);
+  }
+  .code_mobile_detail div {
+    margin-top: 2rem;
+    width: 30%;
+    margin-right: 1.5rem;
+  }
+  .code_mobile_detail div img {
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid rgb(120, 118, 118);
+    width: 100%;
+  }
+  .code_mobile_detail div p {
+    color: white;
+    margin-top: 1rem;
+    font-size: 1.4rem;
+  }
+  .code_mobile_detail div:hover {
+    transform: translateY(-5px);
+  }
+  .code_mobile_detail div:hover img {
+    border: 2px solid #0fecec;
+  }
+  .code_mobile_detail div:hover p {
+    color: #0fecec;
   }
 }
 #menu {

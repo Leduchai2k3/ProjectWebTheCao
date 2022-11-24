@@ -110,4 +110,31 @@
       }
     }
   }
+  .code_mobile_detail {
+    div {
+      margin-top: 2rem;
+      width: 30%;
+      margin-right: 1.5rem;
+      img {
+        border-radius: 5px;
+        overflow: hidden;
+        border: 1px solid rgb(120, 118, 118);
+        width: 100%;
+      }
+      p {
+        color: white;
+        margin-top: 1rem;
+        font-size: 1.4rem;
+      }
+    }
+    div:hover {
+      transform: translateY(-5px);
+      img {
+        border: 2px solid $colorh;
+      }
+      p {
+        color: $colorh;
+      }
+    }
+  }
 }
