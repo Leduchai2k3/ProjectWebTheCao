@@ -102,3 +102,28 @@
 .f_item:hover {
   border-bottom: 1px solid $colorh;
 }
+
+.sub_sidebar {
+  height: 30px;
+  padding-top: 9px;
+  border-top: 1px solid #272727;
+  display: flex;
+  align-items: center;
+  p {
+    font-size: 1.6rem;
+    color: $colorh;
+    margin-right: 5px;
+  }
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    color: $colorh;
+    margin-right: 5px;
+    transition: 0.25s;
+  }
+  a:hover {
+    color: #00fc61;
+  }
+}
