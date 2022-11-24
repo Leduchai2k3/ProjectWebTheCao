@@ -44,6 +44,9 @@
 .header_h div a i {
   margin-right: 5px;
 }
+.header_h div a:hover {
+  color: greenyellow;
+}
 
 .log a:hover {
   color: #5ba8c4;
