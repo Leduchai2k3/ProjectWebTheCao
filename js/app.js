@@ -1,20 +1,20 @@
-// const info = document.createElement("div");
-// subContent.appendChild(info);
-// info.classList.add("info");
-// info.innerHTML = addCard;
-const addCard = `<div class="info">
-                        <button class="btnif"><span class="btnif_content"
-                                style="font-size: 1.2rem;">Viettel</span>
-                            <i class="fa-solid fa-angle-down"></i>
-                            <div class="if_choose_code hide_code">
-                                <p>Viettel</p>
-                                <p>Vinaphone</p>
-                                <p>Mobifone</p>
-                                <p>Vietnammobile</p>
-                                <p>Zing</p>
-                                <p>Garena</p>
-                                <p>Gata</p>
-                                <p>Vcoin</p>
+function addInfo(item) {
+  var div = document.createElement("div");
+  // div.classList.add("info");
+  div.setAttribute("class", "info");
+  div.innerHTML = `
+<button class="btnif"><span class="btnif_content"
+          style="font-size: 1.2rem;">Viettel</span>
+              <i class="fa-solid fa-angle-down"></i>
+                <div class="if_choose_code hide_code">
+                   <p>Viettel</p>
+                    <p>Vinaphone</p>
+                     <p>Mobifone</p>
+                    <p>Vietnammobile</p>
+                    <p>Zing</p>
+                    <p>Garena</p>
+                    <p>Gata</p>
+                    <p>Vcoin</p>
                             </div>
                         </button>
                         <button class="btn2"><input type="text" placeholder="Mã thẻ"></button>
@@ -34,9 +34,15 @@ const addCard = `<div class="info">
                             </div>
                         </button>
                         <button class="remove"><i class="fa-solid fa-trash"></i>
-                            <p>Xóa</p></button>
-                    </div>`;
-
+                            <p>Xóa</p></button>`;
+  // const remove = document.querySelectorAll(".remove");
+  // [...remove].forEach((item) => {
+  //   item.addEventListener("click", () => {
+  //     console.log(this);
+  //   });
+  // });
+  content.appendChild(div);
+}
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
@@ -45,21 +51,12 @@ const nav = $(".nav");
 const close = $(".close");
 const header = $(".header");
 const slide = $(".slide");
-const content = $(".content");
+const content = $("#content");
 const footer = $(".footer");
 const subContent = $(".sub_content");
 const add = $(".add");
-add.addEventListener("click", () => {
-  subContent.insertAdjacentHTML("beforeend", addCard);
-
-  const remove = document.querySelector(".remove");
-  remove.addEventListener("click", () => {
-    remove.parentNode.remove();
-  });
-});
-// const remove = document.querySelector(".remove");
-// remove.addEventListener("click", () => {
-//   console.log(remove.parentNode.remove());
+// add.addEventListener("click", () => {
+//   addInfo();
 // });
 
 function navHide() {
@@ -84,8 +81,9 @@ const chooseTagDetail = $(".choose_tag_detail");
 const priceCodeDetail = $(".price_code_detail");
 const btn1CodeContent = $(".btn1_code_content");
 
-const btnif = $(".btnif");
-const btn1 = $(".btn1");
+const btnif = $$(".btnif");
+
+const btn1 = $$(".btn1");
 const ifPriceCode = $(".if_price_code");
 const itemifPriceCode = ifPriceCode.querySelectorAll("p");
 
@@ -135,11 +133,16 @@ priceCodeDetail.addEventListener("click", () => {
   priceCodeDetail.classList.toggle("avtive_btn");
 });
 
-btnif.addEventListener("click", () => {
-  ifChooseCode.classList.toggle("hide_code");
-  btnif.classList.toggle("avtive_btn");
+[...btnif].forEach((e) => {
+  e.addEventListener("click", () => {
+    ifChooseCode.classList.toggle("hide_code");
+    e.classList.toggle("avtive_btn");
+  });
 });
-btn1.addEventListener("click", () => {
-  ifPriceCode.classList.toggle("hide_code");
-  btn1.classList.toggle("avtive_btn");
+
+[...btn1].forEach((e) => {
+  e.addEventListener("click", () => {
+    ifPriceCode.classList.toggle("hide_code");
+    e.classList.toggle("avtive_btn");
+  });
 });
