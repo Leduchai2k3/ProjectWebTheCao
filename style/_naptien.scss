@@ -1,0 +1,49 @@
+.nap_tien {
+  width: 100%;
+  h2 {
+    background: linear-gradient(to bottom right, #00a6ff, #d9f82c);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    margin: 0 0 30px;
+    font-size: 3rem;
+    padding: 0;
+    color: black;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+  p {
+    color: red;
+    margin-bottom: 10px;
+    font-size: 1.6rem !important;
+  }
+}
+
+.info_naptien {
+  width: 100%;
+  border: 1px solid #fff;
+}
+
+.info_naptien_detail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    // padding-right: 15px;
+    padding-top: 10px;
+    border-right: 1px solid #fff;
+    height: 100%;
+    width: 100%;
+    // padding: 10px;
+    p {
+      font-size: 1.4rem !important;
+      font-weight: 700;
+    }
+  }
+}

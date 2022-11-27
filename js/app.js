@@ -146,3 +146,12 @@ priceCodeDetail.addEventListener("click", () => {
     e.classList.toggle("avtive_btn");
   });
 });
+
+const codes = $$(".code");
+[...codes].forEach((code) => {
+  setTimeout(
+    code.addEventListener("click", () => {
+      alert("Vui lòng đăng nhập hoặc đăng kí !");
+    })
+  );
+});

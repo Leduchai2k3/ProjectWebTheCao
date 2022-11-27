@@ -26,7 +26,7 @@
     flex-wrap: wrap;
     margin-top: 30px;
     justify-content: center;
-    div {
+    a {
       width: 180px;
       margin-right: 3rem;
       margin-bottom: 3rem;
@@ -49,7 +49,7 @@
         transition: 0.25s;
       }
     }
-    div:hover {
+    a:hover {
       transform: translateY(-5px);
       img {
         border: 1px solid $colorh;
