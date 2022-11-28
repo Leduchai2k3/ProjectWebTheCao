@@ -1584,34 +1584,30 @@
 }
 .nap_tien p {
   color: red;
-  margin-bottom: 10px;
   font-size: 1.6rem !important;
 }
 
 .info_naptien {
   width: 100%;
-  border: 1px solid #fff;
 }
 
 .info_naptien_detail {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 100px;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid rgb(76, 76, 76);
+  border: none;
 }
 .info_naptien_detail div {
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr 1.5fr 1fr 1fr 0.5fr;
+}
+.info_naptien_detail div div {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-top: 10px;
-  border-right: 1px solid #fff;
-  height: 100%;
-  width: 100%;
 }
-.info_naptien_detail div p {
-  font-size: 1.4rem !important;
-  font-weight: 700;
+.info_naptien_detail p {
+  border: 1px solid rgb(76, 76, 76);
 }
 
 * {
