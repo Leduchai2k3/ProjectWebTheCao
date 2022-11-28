@@ -35,14 +35,20 @@ function addInfo(item) {
                         </button>
                         <button class="remove"><i class="fa-solid fa-trash"></i>
                             <p>Xóa</p></button>`;
-  // const remove = document.querySelectorAll(".remove");
-  // [...remove].forEach((item) => {
-  //   item.addEventListener("click", () => {
-  //     console.log(this);
-  //   });
-  // });
+  const remove = document.querySelectorAll(".remove");
+  [...remove].forEach((item) => {
+    const btnif1 = $$(".btnif");
+    [...btnif1].forEach((e) => {
+      e.addEventListener("click", () => {
+        ifChooseCode.classList.toggle("hide_code");
+        e.classList.toggle("avtive_btn");
+      });
+    });
+  });
+
   content.appendChild(div);
 }
+
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
@@ -55,9 +61,9 @@ const content = $("#content");
 const footer = $(".footer");
 const subContent = $(".sub_content");
 const add = $(".add");
-// add.addEventListener("click", () => {
-//   addInfo();
-// });
+add.addEventListener("click", () => {
+  addInfo();
+});
 
 function navHide() {
   nav.classList.remove("nav_show");
