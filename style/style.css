@@ -959,6 +959,7 @@
   align-items: center;
   justify-content: center;
   border-top: 1px solid rgb(84, 83, 83);
+  border-bottom: 1px solid rgb(46, 45, 45);
 }
 .footer_fr .footer_f {
   padding: 8px 0px;
@@ -1567,6 +1568,7 @@
 
 .nap_tien {
   width: 100%;
+  transform: translateY(-30%);
 }
 .nap_tien h2 {
   background: linear-gradient(to bottom right, #00a6ff, #d9f82c);
@@ -1589,25 +1591,33 @@
 
 .info_naptien {
   width: 100%;
+  border: 1px solid #fff;
 }
 
 .info_naptien_detail {
   display: flex;
   flex-direction: column;
+  box-shadow: 0px 24px 73px -27px rgba(255, 255, 255, 0.3);
   width: 100%;
-  border: 1px solid rgb(76, 76, 76);
-  border: none;
+}
+.info_naptien_detail #info_naptien {
+  border-bottom: 1px solid #fff;
 }
 .info_naptien_detail div {
   display: grid;
   grid-template-columns: 1.5fr 1.5fr 1.5fr 1fr 1fr 0.5fr;
 }
+.info_naptien_detail div p {
+  border-right: 1px solid #fff;
+  padding: 5px;
+  text-align: center;
+}
 .info_naptien_detail div div {
   display: flex;
   flex-direction: column;
 }
-.info_naptien_detail p {
-  border: 1px solid rgb(76, 76, 76);
+.info_naptien_detail div div p {
+  border-right: 1px solid #fff;
 }
 
 * {
@@ -1626,6 +1636,7 @@ body {
 .main {
   width: 100vw;
   height: 100vh;
+  background-color: black;
 }
 
 a {

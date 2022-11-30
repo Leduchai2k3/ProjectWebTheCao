@@ -13,17 +13,32 @@
     </head>
     <body>
         <div class="main">
+            <div class="container hide">
+                <div class="sub_container1 hide_container1">
+                    <div>
+                        <h4>Thông báo</h4>
+                        <div class="sub_c">
+                            - <p>Nghiêm cấm</p> lợi dụng trang web của chúng tôi để <p>rửa tiền</p>,
+                            <p>lừa đảo</p>,
+                            <p>cờ bạc</p>.
+                            Phát hiện sẽ bị khóa <p>vĩnh viễn</p>.
+                        </div>
+                        <button class="btn">
+                            <p>Đóng</p></button>
+                    </div>
+                </div>
+            </div>
             <div class="sub_container">
                 <i class="fa-solid fa-bars" id="menu"></i>
                 <div class="nav">
                     <div class="ft_item">
                         <div class="log">
-                            <a href="#" class="login">
+                            <a href="login.html" class="login">
                                 <i class="fa-solid fa-right-to-bracket"></i>
                                 <p>Đăng nhập</p>
                             </a>
 
-                            <a href="#" class="signin">
+                            <a href="signin.html" class="signin">
                                 <p>+ Đăng ký</p>
                             </a>
                         </div>
@@ -44,12 +59,12 @@
                     </div>
                 </div>
             </div>
-            <div class="header" style="height: 150px;">
+            <div class="header">
                 <div class="sub_h">
 
                     <div class="header_h">
                         <div class="contact">
-                            <a href="#" class="phone ">
+                            <a href="tel:0763625657" class="phone ">
                                 <i class="fa-solid fa-phone"></i>
                                 <p style="white-space: nowrap;">Hotline: 0763625657</p>
                             </a>
@@ -87,47 +102,41 @@
                         <a href="tintuc.html" class="f_item">Tin tức</a>
                         <!-- </div> -->
                     </div>
-                    <div class="sub_sidebar">
-                        <a href="index.html">Trang chủ</a>
-                        <p> / </p>
-                        <a href="login.html">Đăng nhập</a>
+
+                </div>
+            </div>
+
+            <div class="content" style="margin-top: 110px;">
+
+
+
+                <div class="news_event" id="news_event">
+                    <h3>Tin tức và sự kiện</h3>
+                    <div class="news_event_details">
+                        <div class="event1">
+                            <img src="./imgs/event/1.jpg" alt="">
+                            <p>Cách đổi thẻ cào sang thẻ Garena, Zing, Vcoin, Gosu, Soha, Gate,
+                                Funcard,
+                                Appota, Scoin, Carot, Giftcode</p>
+                        </div>
+                        <div class="event2">
+                            <img src="./imgs/event/2.jpg" alt="">
+                            <p>Tuyển đại lý c1 gạch cước, nạp tiền Viettel, Vina, Mobi, Vietnammobi,
+                                FTTH, SMS Game</p>
+                        </div>
+                        <div class="event3">
+                            <img src="./imgs/event/3.jpg" alt="">
+                            <p>Cài bảo mật, bảo vệ tài khoản bằng GoogleAuth hoặc mật khẩu cấp 2</p>
+                        </div>
+                        <div class="event4" style="margin-right: 0px;">
+                            <img src="./imgs/event/4.jpg" alt="">
+                            <p>Tích hợp API gạch thẻ tự động cho Shop game và Web dịch vụ</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="sidebar">
-                <div class="sub_sidebars">
-                    <div class="login-box" style="position: relative;">
-                        <h2>Login</h2>
-                        <form>
-                            <div class="user-box">
-                                <input type="text" name="" required="">
-                                <label>Username</label>
-                            </div>
-                            <div class="user-box">
-                                <input type="password" name="" required="">
-                                <label>Password</label>
-                            </div>
-                            <div>
-                                <a href="#">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    Submit
-                                </a>
-                                <a href="signin.html" class="signin">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    Sign in
-                                </a>
-                            </div>
-                            <a href="forgetpass.html" class="forgetpass">Forget Password</a>
-                        </form>
-                    </div>
-                </div>
-            </div>
+
+
             <div class="footer">
                 <div class="footer_h">
                     <h3>Về chúng tôi</h3>
@@ -137,15 +146,14 @@
                                 <img src="./imgs/logo/1234.png" alt="">
                                 <h3>Haidev.Vn</h3>
                             </div>
-                            <p>Mua thẻ điện thoại, thẻ game, nạp tiền điện thoại, thanh toán
-                                cước di
+                            <p>Mua thẻ điện thoại, thẻ game, nạp tiền điện thoại, thanh toán cước di
                                 động Viettel, Vina, Mobi, Vnmobi, internet, home giá rẻ.
                                 Thanh
                                 toán tự động, nhanh chóng và uy tín.</p>
                         </div>
                         <div class="about_1">
                             <h5>Liên kết & Đối tác</h5>
-                            <a href="#">Haidev.VN</a>
+                            <a href="index.html">Haidev.VN</a>
                             <a href="#">Fanpage hỗ trợ</a>
                             <a href="#">Facebook Admin</a>
                         </div>
@@ -181,7 +189,7 @@
                 <div class="footer_fr">
                     <div class="footer_f">
                         <div><i class="fa-solid fa-globe"></i>
-                            <a href="#">Haidev.vn</a>
+                            <a href="index.html">Haidev.vn</a>
                         </div>
                         <div class="btn5">
                             <button>
